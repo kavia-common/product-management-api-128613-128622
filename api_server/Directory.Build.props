@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <!-- Ensure restore uses the repo NuGet.config -->
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)NuGet.config</RestoreConfigFile>
+    <!-- Avoid interactive prompts during CI restores -->
+    <RestoreNoCache>true</RestoreNoCache>
+    <RestoreDisableParallel>false</RestoreDisableParallel>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+</Project>
