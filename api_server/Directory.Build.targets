@@ -1,0 +1,6 @@
+<Project>
+  <Target Name="EnsureRestoreRan" BeforeTargets="BeforeBuild">
+    <Message Text="Ensuring NuGet restore has run..." Importance="high" />
+    <Exec Command="dotnet restore &quot;$(MSBuildProjectFullPath)&quot;" IgnoreExitCode="false" />
+  </Target>
+</Project>
